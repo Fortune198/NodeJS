@@ -52,6 +52,7 @@ app.use((req, res, next) => {
     next();
 });
 
+//error handling middleware
 //app.use(errorController.logErrors);
 app.use(errorController.respondNoResourceFound);
 app.use(errorController.respondInternalError);

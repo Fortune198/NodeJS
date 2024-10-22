@@ -9,6 +9,7 @@ exports.sendReqParam = (req, res) => {
 //     res.send("POST Successful!");
 // };
 
+//Respond with a custom ejs view
 exports.respondWithName = (req, res) => {
     res.render("index");
 };

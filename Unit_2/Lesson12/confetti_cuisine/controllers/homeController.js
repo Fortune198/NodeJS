@@ -1,6 +1,7 @@
 "use strict";
 //courses object
-var courses = [
+//defining array of courses to the view
+let courses = [
   {
     title: "Event Driven Cakes",
     cost: 50

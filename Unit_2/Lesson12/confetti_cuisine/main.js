@@ -1,13 +1,13 @@
 "use strict";
 
-const express = require("express"),
-  app = express(),
-  homeController = require("./controllers/homeController"),
-  errorController = require("./controllers/errorController"),
-  layouts = require("express-ejs-layouts");
+const express = require("express");
+const app = express();
+const homeController = require("./controllers/homeController");
+const errorController = require("./controllers/errorController");
+const layouts = require("express-ejs-layouts");
 
-  //requires ejs express layout module
-  //sets applicationtouse ejs
+//requires ejs express layout module
+//sets application to use ejs
 app.set("view engine", "ejs");
 
 //parses route into JSON object
@@ -33,6 +33,7 @@ app.get("/courses", homeController.showCourses);
 app.get("/contact", homeController.showSignUp);
 app.post("/contact", homeController.postedSignUpForm);
 
+//error hadler middleware
 app.use(errorController.pageNotFoundError);
 app.use(errorController.internalServerError);
 
